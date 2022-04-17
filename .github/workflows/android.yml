@@ -1,3 +1,12 @@
+# npm install -g json
+# yarn
+# cd node_modules\react-native-obfuscating-transformer
+# json -I -f package.json -e "this.dependencies['javascript-obfuscator']='1.3.0'"
+# rmdir -r node_modules
+# npm install
+# cd ../../
+# cd android
+# ./gradlew assembleEnvironmentTestingRelease
 name: Android
 
 on: [push, pull_request]
