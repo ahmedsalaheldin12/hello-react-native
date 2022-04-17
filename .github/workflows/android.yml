@@ -39,6 +39,12 @@ jobs:
          restore-keys: |
            ${{ runner.os }}-node-
            
+    -  name: Build Android apk (debug)
+       run: | 
+          cd android && chmod +x ./gradlew
+          ./gradlew assembleDebug -Dorg.gradle.logging.level=info
+      #working-directory: android
+           
     - name: Cache Gradle Wrapper
       uses: actions/cache@v2
       with:
@@ -53,10 +59,10 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-gradle-caches-
           
-    - name: Build Android apk (debug)
-      run: | 
-          cd android && chmod +x ./gradlew
-          ./gradlew assembleDebug -Dorg.gradle.logging.level=info
+#     - name: Build Android apk (debug)
+#       run: | 
+#           cd android && chmod +x ./gradlew
+#           ./gradlew assembleDebug -Dorg.gradle.logging.level=info
       #working-directory: android
       # aa
       
