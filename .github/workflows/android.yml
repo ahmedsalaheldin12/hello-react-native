@@ -58,6 +58,7 @@ jobs:
           cd android && chmod +x ./gradlew
           ./gradlew assembleDebug -Dorg.gradle.logging.level=info
       #working-directory: android
+      # aa
       
 
     -  uses: actions/upload-artifact@v2
