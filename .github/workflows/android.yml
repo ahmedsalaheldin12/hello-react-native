@@ -5,7 +5,7 @@
 # rmdir -r node_modules
 # npm install
 # cd ../../
-# cd android
+#  cd android
 # ./gradlew assembleEnvironmentTestingRelease
 name: Android
 
