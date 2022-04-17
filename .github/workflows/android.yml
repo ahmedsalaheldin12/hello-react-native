@@ -25,11 +25,11 @@ jobs:
     - run: |
           npm install -g json
           yarn
-          cd node_modules/react-native-obfuscating-transformer
-          json -I -f package.json -e "this.dependencies['javascript-obfuscator']='1.3.0'"
-          rm -r node_modules
-          npm install
-          cd ../../
+         # cd node_modules/react-native-obfuscating-transformer
+         # json -I -f package.json -e "this.dependencies['javascript-obfuscator']='1.3.0'"
+         # rm -r node_modules
+         # npm install
+         # cd ../../
           
 #     - name: Cache npm dependencies
 #       uses: actions/cache@v2
